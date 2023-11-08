@@ -9,8 +9,8 @@ help()
   exit 2
 }
 
-SHORT=p:,r:,h:,l
-LONG=prefix:,retention:,help:,log
+SHORT=p:,r:,h:,l:,s
+LONG=prefix:,retention:,help:,log:,src_0
 OPTS=$(getopt -a -n $0 --options $SHORT --longoptions $LONG -- "$@")
 
 VALID_ARGUMENTS=$# # Returns the count of arguments that are in short or long options
