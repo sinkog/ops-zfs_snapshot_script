@@ -1,8 +1,8 @@
 ### MONTHLY
-5 0 1 * * ansible ~ansible/bin/zfsBackup.sh --prefix monthly --retention 13 --src_0 rpool/ROOT  >/dev/null 2>&1
+5 0 1 * * ansible ~ansible/bin/zfsBackup.sh --prefix monthly --retention 13 --src_0 rpool  >/dev/null 2>&1
 
-### WEEKLY
-10 0 * * 1 ansible ~ansible/bin/zfsBackup.sh --prefix weekly --retention 5 --src_0 rpool/ROOT  >/dev/null 2>&1
+### WEEKLY~ansible/bin/zfsBackup.sh --prefix daily --retention 15 --src_0 rpool/ROOT  >/dev/null 2>&1
+10 0 * * 1 ansible ~ansible/bin/zfsBackup.sh --prefix weekly --retention 5 --src_0 rpool  >/dev/null 2>&1
 
 ### DAILY
-15 0 * * * ansible ~ansible/bin/zfsBackup.sh --prefix daily --retention 15 --src_0 rpool/ROOT  >/dev/null 2>&1
+15 0 * * * ansible ~ansible/bin/zfsBackup.sh --prefix daily --retention 15 --src_0 rpool  >/dev/null 2>&1
